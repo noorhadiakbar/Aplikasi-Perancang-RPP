@@ -82,7 +82,7 @@ export default function Register() {
         <Card className="w-full max-w-md animate-fade-up border-slate-200 shadow-sm">
           <CardHeader>
             <CardTitle className="font-heading text-2xl">Registrasi Guru</CardTitle>
-            <CardDescription>Gratis — akun Anda menyimpan seluruh perangkat pembelajaran.</CardDescription>
+            <CardDescription>Gratis  akun Anda menyimpan seluruh perangkat pembelajaran.</CardDescription>
           </CardHeader>
           <CardContent>
             <form

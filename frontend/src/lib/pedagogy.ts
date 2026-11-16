@@ -1,4 +1,4 @@
-// Taxonomi pedagogi Indonesia — static reference data (kurikulum, pendekatan, model,
+// Taxonomi pedagogi Indonesia  static reference data (kurikulum, pendekatan, model,
 // metode, strategi). Lives in the frontend so dropdowns, auto-sintaks, and the reference
 // library render instantly and survive a static/CDN build with no backend.
 
@@ -76,7 +76,7 @@ export const CURRICULA: CurriculumInfo[] = [
   },
   {
     id: "darurat",
-    name: "Kurikulum Darurat (2020–2022)",
+    name: "Kurikulum Darurat (20202022)",
     description:
       "Kurikulum penyelamat pembelajaran masa pandemi Covid-19 yang menitikberatkan literasi, numerasi, dan kompetensi kunci; menghapus ujian nasional.",
     instruments: ["RPP ringkas", "Modul belajar mandiri", "Asesmen awal"],
@@ -96,7 +96,7 @@ export const CURRICULA: CurriculumInfo[] = [
     id: "berbasis_cinta",
     name: "Kurikulum Berbasis Cinta (KBC)",
     description:
-      "Inisiatif Kemenag (diluncurkan 25 Juli 2025, KMA No. 1503/2025) yang menempatkan kasih sayang, empati, dan nilai spiritual sebagai fondasi semua mata pelajaran — berlandaskan 5 nilai Panca Cinta menuju Madrasah/Sekolah Ramah Anak dan Ramah Lingkungan, diperkuat semangat cinta tanah air (hubbul wathan minal iman).",
+      "Inisiatif Kemenag (diluncurkan 25 Juli 2025, KMA No. 1503/2025) yang menempatkan kasih sayang, empati, dan nilai spiritual sebagai fondasi semua mata pelajaran  berlandaskan 5 nilai Panca Cinta menuju Madrasah/Sekolah Ramah Anak dan Ramah Lingkungan, diperkuat semangat cinta tanah air (hubbul wathan minal iman).",
     instruments: [
       "Modul ajar bermuatan Panca Cinta",
       "Budaya belajar berbasis cinta",
@@ -192,7 +192,7 @@ export const APPROACHES: ApproachInfo[] = [
     id: "deep_learning",
     name: "Pembelajaran Mendalam (Deep Learning)",
     description:
-      "Pendekatan resmi Kemendikdasmen (2025) yang memuliakan belajar: suasana berkesadaran (mindful), bermakna (meaningful), dan menggembirakan (joyful) melalui olah pikir, olah hati, olah rasa, dan olah raga — menuju 8 dimensi profil lulusan.",
+      "Pendekatan resmi Kemendikdasmen (2025) yang memuliakan belajar: suasana berkesadaran (mindful), bermakna (meaningful), dan menggembirakan (joyful) melalui olah pikir, olah hati, olah rasa, dan olah raga  menuju 8 dimensi profil lulusan.",
     implementation: [
       "Prinsip: berkesadaran, bermakna, menggembirakan",
       "Pengalaman belajar: memahami ? mengaplikasi ? merefleksi",
@@ -209,9 +209,9 @@ export const MODELS: ModelInfo[] = [
       "Alur pengalaman belajar Pembelajaran Mendalam Kemendikdasmen 2025: memahami, mengaplikasi, dan merefleksi, dengan suasana berkesadaran, bermakna, dan menggembirakan.",
     rationale: "Membangun pemahaman utuh dan mendalam yang dipakai dalam kehidupan nyata, menuju 8 dimensi profil lulusan.",
     syntax: [
-      "Memahami — membangun pengetahuan esensial secara berkesadaran (mindful)",
-      "Mengaplikasi — menerapkan pengetahuan pada konteks nyata yang bermakna (meaningful)",
-      "Merefleksi — mengevaluasi diri dan memaknai proses belajar dengan gembira (joyful)",
+      "Memahami  membangun pengetahuan esensial secara berkesadaran (mindful)",
+      "Mengaplikasi  menerapkan pengetahuan pada konteks nyata yang bermakna (meaningful)",
+      "Merefleksi  mengevaluasi diri dan memaknai proses belajar dengan gembira (joyful)",
     ],
     suitedFor: ["PAUD", "SD", "SMP", "SMA", "SMK"],
   },
@@ -367,7 +367,7 @@ export const STRATEGIES: StrategyInfo[] = [
   { id: "jurnal_reflektif", name: "Jurnal Reflektif", description: "Peserta didik menuliskan pemahaman, hambatan, dan rencana belajar berikutnya.", whenToUse: "Menutup pembelajaran dan memantau perkembangan metakognitif." },
 ];
 
-// 8 Dimensi Profil Lulusan — Permendikdasmen No. 13/2025 (menggantikan 6 dimensi Profil Pelajar Pancasila)
+// 8 Dimensi Profil Lulusan  Permendikdasmen No. 13/2025 (menggantikan 6 dimensi Profil Pelajar Pancasila)
 export const GRADUATE_DIMENSIONS: { name: string; description: string }[] = [
   {
     name: "Keimanan dan Ketakwaan kepada Tuhan YME",
@@ -403,7 +403,7 @@ export const GRADUATE_DIMENSIONS: { name: string; description: string }[] = [
   },
 ];
 
-// 5 nilai Panca Cinta — landasan Kurikulum Berbasis Cinta (Kemenag, KMA No. 1503/2025)
+// 5 nilai Panca Cinta  landasan Kurikulum Berbasis Cinta (Kemenag, KMA No. 1503/2025)
 export const PANCA_CINTA: { name: string; description: string }[] = [
   {
     name: "Cinta kepada Allah Swt. dan Rasul-Nya",
@@ -429,12 +429,12 @@ export const PANCA_CINTA: { name: string; description: string }[] = [
 
 // Level kognitif taksonomi Bloom (revisi) untuk kisi-kisi soal sumatif
 export const COGNITIVE_LEVELS: { id: string; name: string }[] = [
-  { id: "C1", name: "C1 — Mengingat" },
-  { id: "C2", name: "C2 — Memahami" },
-  { id: "C3", name: "C3 — Menerapkan" },
-  { id: "C4", name: "C4 — Menganalisis" },
-  { id: "C5", name: "C5 — Mengevaluasi" },
-  { id: "C6", name: "C6 — Mencipta" },
+  { id: "C1", name: "C1  Mengingat" },
+  { id: "C2", name: "C2  Memahami" },
+  { id: "C3", name: "C3  Menerapkan" },
+  { id: "C4", name: "C4  Menganalisis" },
+  { id: "C5", name: "C5  Mengevaluasi" },
+  { id: "C6", name: "C6  Mencipta" },
 ];
 
 export const QUESTION_TYPE_LABELS: Record<string, string> = {

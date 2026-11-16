@@ -1,4 +1,4 @@
-// Hand-written mirrors of the Pydantic models in backend/models/ — nothing infers across
+// Hand-written mirrors of the Pydantic models in backend/models/  nothing infers across
 // the HTTP boundary, so keeping these in sync is manual discipline.
 
 export interface SyntaxStep {
@@ -18,7 +18,7 @@ export interface KKTPInterval {
   description: string;
 }
 
-// Mirror of backend/models/document.py::AssessmentItem — butir kisi-kisi & soal sumatif
+// Mirror of backend/models/document.py::AssessmentItem  butir kisi-kisi & soal sumatif
 export interface AssessmentItem {
   order: number;
   objective: string;
@@ -31,7 +31,7 @@ export interface AssessmentItem {
   points: number;
 }
 
-// Mirror of backend/models/document.py::RubricRow — rubrik penilaian 4 level
+// Mirror of backend/models/document.py::RubricRow  rubrik penilaian 4 level
 export interface RubricRow {
   criterion: string;
   excellent: string;

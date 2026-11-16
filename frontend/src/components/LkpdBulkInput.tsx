@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 // Parses rows copied from Excel/Sheets (tab-separated; ; or , also accepted):
-// Nama | Kelas | Jawaban No 1 | No 2 | … — a header row starting with "Nama" is skipped.
+// Nama | Kelas | Jawaban No 1 | No 2 |   a header row starting with "Nama" is skipped.
 export function parsePasted(text: string, items: AssessmentItem[]): GradeIn[] {
   const lines = text.split(/\r?\n/).map((l) => l.trimEnd()).filter((l) => l.trim());
   const sep = lines.some((l) => l.includes("\t")) ? "\t" : lines.some((l) => l.includes(";")) ? ";" : ",";
@@ -33,7 +33,7 @@ export function LkpdBulkInput({ docId, items, onDone }: { docId: string; items: 
     mutationFn: () => apiPost<LkpdSubmission[]>(`/lkpd/${docId}/grade-bulk`, { students } satisfies BulkGradeIn),
     onSuccess: (subs) => {
       const passed = subs.filter((s) => s.passed).length;
-      toast.success(`${subs.length} siswa dinilai — ${passed} tuntas, ${subs.length - passed} perlu remedial`);
+      toast.success(`${subs.length} siswa dinilai  ${passed} tuntas, ${subs.length - passed} perlu remedial`);
       setText("");
       onDone();
     },
@@ -49,7 +49,7 @@ export function LkpdBulkInput({ docId, items, onDone }: { docId: string; items: 
         <div>
           <p className="flex items-center gap-2 font-heading text-lg font-bold"><ClipboardPaste className="h-5 w-5 text-primary" /> Input Nilai Massal dari Excel</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Salin baris dari Excel lalu tempel di bawah. Urutan kolom: <b>Nama · Kelas · Jawaban No 1 … No {items.length}</b>. Untuk PG cukup huruf (A–E).
+            Salin baris dari Excel lalu tempel di bawah. Urutan kolom: <b>Nama  Kelas  Jawaban No 1  No {items.length}</b>. Untuk PG cukup huruf (AE).
           </p>
         </div>
         <a href={`/api/lkpd/${docId}/template.xlsx`} download data-testid="lkpd-bulk-template-btn">
@@ -84,9 +84,9 @@ export function LkpdBulkInput({ docId, items, onDone }: { docId: string; items: 
       )}
 
       <Button className="w-full" size="lg" disabled={!students.length || grade.isPending || students.length > 60} onClick={() => grade.mutate()} data-testid="lkpd-bulk-grade-btn">
-        {grade.isPending ? <><Loader2 className="mr-1 h-4 w-4 animate-spin" /> Menilai {students.length} siswa{hasEssay ? " (uraian oleh AI, bisa ±1–2 menit)" : ""}…</> : <><Users className="mr-1 h-4 w-4" /> Nilai Semua ({students.length} siswa)</>}
+        {grade.isPending ? <><Loader2 className="mr-1 h-4 w-4 animate-spin" /> Menilai {students.length} siswa{hasEssay ? " (uraian oleh AI, bisa 12 menit)" : ""}</> : <><Users className="mr-1 h-4 w-4" /> Nilai Semua ({students.length} siswa)</>}
       </Button>
-      {students.length > 60 && <p className="text-xs text-rose-600">Maksimal 60 siswa per pengiriman — bagi menjadi beberapa kali.</p>}
+      {students.length > 60 && <p className="text-xs text-rose-600">Maksimal 60 siswa per pengiriman  bagi menjadi beberapa kali.</p>}
     </div>
   );
 }
