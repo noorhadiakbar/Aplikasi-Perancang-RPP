@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Loader2, Plus, Sparkles, Trash2 } from "lucide-react";
-import { apiPost, ApiError } from "@/lib/api";
+import { apiPost } from "@/lib/api";
+import { ApiError } from "@/lib/apiError";
 import { COGNITIVE_LEVELS, DOC_TYPE_LABELS, QUESTION_TYPE_LABELS } from "@/lib/pedagogy";
 import type {
   AssessmentItem,
