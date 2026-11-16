@@ -1,0 +1,8 @@
+{
+  "name": "bolt-project",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev"
+  }
+}
